@@ -1,0 +1,565 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: fot-tsukubrdgothic-std, sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
+  color:#65655E;
+
+}
+body{
+  width: 100vw;
+}
+header{
+  text-align: center;
+}
+.logo{
+  margin-top: 13px;
+  margin-bottom: 30px;
+}
+
+#g-nav.panelactive{
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position:fixed;
+    z-index: 999;
+  top: 0;
+  width:100%;
+    height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg{
+    position: fixed;
+  z-index:3;
+    /*丸の形*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #D0B87F;
+    /*丸のスタート位置と形状*/
+  transform: scale(0);/*scaleをはじめは0に*/
+  left:-50px;
+    top:-50px;
+    transition: all .6s;/*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive{
+  transform: scale(50);/*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list{
+    display: none;/*はじめは表示なし*/
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list{
+    display: block; /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  opacity: 0;/*はじめは透過0*/
+    /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+    position: absolute;
+    z-index: 999;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+    opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li{
+animation-name:gnaviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes gnaviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li{
+  text-align: center;
+  list-style: none;
+}
+
+#g-nav li a{
+  color: #fff;
+  text-decoration: none;
+  padding:10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  font-size: 30px;
+}
+.link{
+  font-size: 15px !important;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn1{
+  position:fixed;
+  top:55px;
+  left: 152px;
+  z-index: 9999;/*ボタンを最前面に*/
+  cursor: pointer;
+    width: 70px;
+    height:80px;
+
+    display: flex;
+    flex-direction: column;
+    align-content:space-around ;
+}
+
+/*×に変化*/
+.openbtn1 span{
+    display: inline-block;
+    transition: all .4s;
+    margin-bottom: 5px;
+    left: 14px;
+    height: 12px;
+    border-radius: 20px;
+  background-color: #D0B87F;
+    width: 72%;
+
+
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top:15px;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top:23px;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top:31px;
+}
+
+.openbtn1.active span:nth-of-type(1) {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 70%;
+    background-color: #FFF;
+}
+
+.openbtn1.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn1.active span:nth-of-type(3){
+      position: absolute;
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 70%;
+    background-color: #FFF;
+}
+h2{
+  color: #D0B87F;
+  border-bottom: 4px dashed #D0B87F;
+  display: inline-block;
+  padding: 20px;
+}
+#about{
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  padding-top: 70px;
+  background: url(../images/bg1.png) center/cover;
+  background-repeat: none;
+  height: 60vh;
+
+}
+
+#about h2{
+  margin-bottom: 13vh;
+}
+#about p{
+  letter-spacing: 0.2em;
+  line-height: 2.5em;
+  font-size: 20px;
+}
+.about-content{
+  display: flex;
+  justify-content: space-around;
+}
+
+#rule{
+
+  position: relative;
+  height: 135vh;
+  padding-bottom: 50px;
+  padding-top: 70px;
+  text-align: center;
+  background-color: #FFF5E5;
+}
+#ato1{
+  position: absolute;
+  top: 120px;
+  right:25px;
+  transform: rotate(14deg);
+}
+#ato2{
+  position: absolute;
+  top: 181px;
+  right:202px;
+  transform: rotate(14deg);
+}
+#ato3{
+  position: absolute;
+  top: 240px;
+  right:424px;
+  transform: rotate(14deg);
+}
+#ato4{
+  position: absolute;
+  top: 279px;
+  right:606px;
+  transform: rotate(14deg);
+}
+#ato5{
+  position: absolute;
+  top: 470px;
+  right:730px;
+  transform: rotate(-84deg);
+}
+#ato6{
+  position: absolute;
+  top: 728px;
+  right:739px;
+  transform: rotate(-19deg);
+}
+#ato7{
+  position: absolute;
+  top: 963px;
+  right:606px;
+  transform: rotate(-91deg);
+}
+#ato8{
+  position: absolute;
+  top: 1060px;
+  right:202px;
+  transform: rotate(-91deg);
+
+}
+#ato9{
+  position: absolute;
+  top: 1000px;
+  right:424px;
+  transform: rotate(-91deg);
+}
+#ato10{
+  position: absolute;
+  top: 1100px;
+  right:25px;
+  transform: rotate(-91deg);
+}
+
+#rule h2{
+  margin-bottom: 13vh;
+}
+.rule-content{
+  display: flex;
+  justify-content: center;
+
+}
+.rule-content p{
+  text-align-last: left;
+  line-height: 3em;
+  font-size: 18px;
+  margin: auto 0;
+  width: 260px;
+
+}
+.circle{
+  margin: auto 0;
+}
+.left .circle{
+  margin-left: 2vw;
+}
+.left p{
+  margin-left: 3vw;
+}
+.right .circle{
+  margin-right: 2vw;
+}
+.right p{
+  margin-right: 3vw;
+}
+.left{
+  margin-right: 45vw;
+}
+.right{
+  margin-left: 45vw ;
+}
+#prepare{
+  position: relative;
+  padding: 50px;
+  padding-top: 100px;
+  text-align: center;
+  background-color: #C1DEA7;
+  background: url(../images/bg2.png) center/cover;
+  height: 100vh;
+}
+#stick{
+  position: absolute;
+  top: 360px;
+  left: 358px;
+}
+#molks{
+  position: absolute;
+  top: 145px;
+  left: 890px;
+}
+#cloud1{
+  position: absolute;
+  top: -60px;
+  left: 100px;
+}
+#cloud2{
+  position: absolute;
+  top: 100px;
+  left: 320px;
+}
+#cloud3{
+  position: absolute;
+  top: -40px;
+  left: 1160px;
+}
+
+#prepare h2{
+  border:none;
+  margin-bottom: 30vh;
+}
+.prepare-contents{
+
+  display: flex;
+  justify-content: space-around;
+}
+#arrow {
+  position: absolute;
+  top: 45vh;
+  left: 37vw;
+
+}
+.distance{
+  color:#fff;
+  text-align: center;
+
+}
+.prepare-contents p{
+
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 14vh;
+}
+.prepare-content{
+  background: #fff;
+  width: 309px;
+  height: 309px;
+
+}
+.prepare-content p{
+  width: 200px;
+  text-align: left;
+  font-size: 20px;
+  margin: 0 auto;
+}
+h3{
+color: #D0B87F;
+font-size: 28px;
+margin-top: 40px;
+margin-bottom: 40px;
+font-weight: bold;
+}
+
+#play{
+  background: url(../images/bg3.png) center/cover;
+  text-align: center;
+  height: 120vh ;
+  padding-top: 10vh;
+}
+#play h2 {
+  border: none;
+  margin-bottom: 15vh;
+}
+.play-contents{
+  display: flex;
+  justify-content: space-around;
+}
+.play-content{
+  position: relative;
+
+}
+.case{
+  position: absolute;
+  width: 115px;
+  top: -100px;
+  left: -30px;
+}
+.play-content p{
+  width: 70%;
+  margin: 0 auto;
+  text-align-last: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skitto-box{
+  height: 27%;
+}
+#result{
+  position: relative;
+  background:url(../images/bg4.png) center/cover;
+  text-align: center;
+  margin-top: -15vh;
+  height: 105vh;
+}
+
+.result-contents{
+  padding-top: 5vh;
+  display: flex;
+  justify-content: space-around;
+
+
+}
+.result-content{
+  position: relative;
+  background:#fff;
+  padding: 20px;
+
+  border-radius: 10%;
+  height: 60vh;
+  width: 23vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+.pin{
+  position: absolute;
+  top: -83px;
+  left: 33px;
+  width: 40px;
+}
+
+.result-content p{
+  font-size: 30px;
+}
+.result-content img{
+  margin-top: 40px;
+}
+.result-content h3{
+  font-size: 30px;
+}
+h3 span{
+  font-size: 50px;
+  font-weight: bold;
+  color: #D0B87F;
+}
+.caption{
+  width: 60%;
+  text-align: left;
+  margin: 0 auto;
+}
+#item{
+  padding: 50px;
+  text-align: center;
+  background: #FFF5E5;
+  position: relative;
+  z-index: -1;
+}
+#tree1{
+  width: 130px;
+  position: absolute;
+  right: 45px;
+  bottom: -110px;
+  z-index: 999;
+}
+#tree2{
+  width: 130px;
+  position: absolute;
+  left: 45px;
+  bottom: -110px;
+  z-index: 999;
+}
+.item-contents{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10vh;
+}
+.item-box img{
+  border-radius: 50%;
+  border: solid 1px #D0B87F ;
+}
+.item-box{
+  height: 25vh;
+
+}
+
+.border{
+  height: 20vh;
+  margin-top: 2vh;
+
+}
+#item1{
+  margin-left: 10vw;
+}
+#item2{
+  margin-right: 10vw;
+}
+footer{
+  text-align: center;
+  background:#D0B87F;
+  padding: 5px 0;
+
+}
+footer p{
+  color: #fff;
+}
+.fuwatAnime {
+ -webkit-animation-fill-mode:both;
+ -ms-animation-fill-mode:both;
+ animation-fill-mode:both;
+ -webkit-animation-duration:1.5s;
+ -ms-animation-duration:1.5s;
+ animation-duration:1.5s;
+ -webkit-animation-name: fuwatAnime;
+ -ms-animation-name: fuwatAnime;
+ animation-name: fuwatAnime;
+ visibility: visible !important;
+}
+@-webkit-keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); }
+}
+@keyframes fuwatAnime {
+ 0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+ 100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
