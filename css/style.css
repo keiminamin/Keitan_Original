@@ -8,6 +8,7 @@
   font-style: normal;
   color:#65655E;
 
+
 }
 body{
   width: 100vw;
@@ -18,11 +19,13 @@ header{
 .logo{
   margin-top: 13px;
   margin-bottom: 30px;
+
+
 }
 
 #g-nav.panelactive{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    position:fixed;
+    /* position:fixed; */
     z-index: 999;
   top: 0;
   width:100%;
@@ -164,7 +167,7 @@ opacity: 1;
 .openbtn1.active span:nth-of-type(1) {
     position: absolute;
     top: 18px;
-    left: 18px;
+    left: 14px;
     transform: translateY(6px) rotate(-45deg);
     width: 70%;
     background-color: #FFF;
@@ -177,7 +180,7 @@ opacity: 1;
 .openbtn1.active span:nth-of-type(3){
       position: absolute;
     top: 30px;
-    left: 18px;
+    left: 14px;
     transform: translateY(-6px) rotate(45deg);
     width: 70%;
     background-color: #FFF;
@@ -442,6 +445,7 @@ font-weight: bold;
   text-align: center;
   margin-top: -15vh;
   height: 105vh;
+  z-index: 10;
 }
 
 .result-contents{
@@ -493,7 +497,7 @@ h3 span{
   text-align: center;
   background: #FFF5E5;
   position: relative;
-  z-index: -1;
+
 }
 #tree1{
   width: 130px;
@@ -520,8 +524,19 @@ h3 span{
 }
 .item-box{
   height: 25vh;
+  display: block;
+  transition: 0.7s;
 
 }
+.item-box:hover{
+
+-moz-transform: scale(1.1);
+-webkit-transform: scale(1.1);
+-ms-transform: scale(1.1);
+transform: scale(1.1);
+}
+
+
 
 .border{
   height: 20vh;
@@ -529,10 +544,18 @@ h3 span{
 
 }
 #item1{
+
   margin-left: 10vw;
 }
 #item2{
   margin-right: 10vw;
+}
+#star{
+  width: 90px;
+  position: absolute;
+  top: 26vh;
+  left: 20vw;
+  z-index: 999;
 }
 footer{
   text-align: center;
