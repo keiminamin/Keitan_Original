@@ -16,6 +16,7 @@ body{
 header{
   text-align: center;
 }
+
 .logo{
   margin-top: 13px;
   margin-bottom: 30px;
@@ -214,6 +215,9 @@ h2{
   display: flex;
   justify-content: space-around;
 }
+.about-content-sp{
+  display: none;
+}
 
 #rule{
 
@@ -224,70 +228,71 @@ h2{
   text-align: center;
   background-color: #FFF5E5;
 }
+
 #ato1{
   position: absolute;
-  top: 120px;
-  right:25px;
+  top: 10vh;
+  right:3vw;
   transform: rotate(14deg);
 }
 #ato2{
   position: absolute;
-  top: 181px;
-  right:202px;
+  top: 17vh;
+  right:16vw;
   transform: rotate(14deg);
 }
 #ato3{
   position: absolute;
-  top: 240px;
-  right:424px;
+  top: 22vh;
+  right:28vw;
   transform: rotate(14deg);
 }
 #ato4{
   position: absolute;
-  top: 279px;
-  right:606px;
+  top: 28vh;
+  right:40vw;
   transform: rotate(14deg);
 }
 #ato5{
   position: absolute;
-  top: 470px;
-  right:730px;
+  top: 60vh;
+  right:50vw;
   transform: rotate(-84deg);
 }
 #ato6{
   position: absolute;
-  top: 728px;
-  right:739px;
+  top: 90vh;
+  right:48vw;
   transform: rotate(-19deg);
 }
 #ato7{
   position: absolute;
-  top: 963px;
-  right:606px;
+  top: 115vh;
+  right:40vw;
   transform: rotate(-91deg);
 }
-#ato8{
-  position: absolute;
-  top: 1060px;
-  right:202px;
-  transform: rotate(-91deg);
 
-}
 #ato9{
   position: absolute;
-  top: 1000px;
-  right:424px;
+  top: 125vh;
+  right:22vw;
   transform: rotate(-91deg);
 }
 #ato10{
   position: absolute;
   top: 1100px;
-  right:25px;
+  right:80px;
   transform: rotate(-91deg);
 }
 
 #rule h2{
   margin-bottom: 13vh;
+}
+.rule-contents{
+  display: block;
+}
+.rule-contents-sp{
+  display: none;
 }
 .rule-content{
   display: flex;
@@ -334,28 +339,32 @@ h2{
 }
 #stick{
   position: absolute;
-  top: 360px;
-  left: 358px;
+  top: 32vh;
+  left: 20vw;
 }
 #molks{
   position: absolute;
-  top: 145px;
-  left: 890px;
+  top: 3vh;
+  left: 60vw;
 }
 #cloud1{
   position: absolute;
-  top: -60px;
+  top: -186px;
   left: 100px;
 }
 #cloud2{
   position: absolute;
-  top: 100px;
+  top: -20px;
   left: 320px;
 }
 #cloud3{
   position: absolute;
-  top: -40px;
+  top: -137px;
   left: 1160px;
+}
+
+#prepare-sp{
+  display: none;
 }
 
 #prepare h2{
@@ -369,7 +378,7 @@ h2{
 }
 #arrow {
   position: absolute;
-  top: 45vh;
+  top: 33vh;
   left: 37vw;
 
 }
@@ -499,18 +508,21 @@ h3 span{
   position: relative;
 
 }
+#item-sp{
+  display: none;
+}
 #tree1{
   width: 130px;
   position: absolute;
-  right: 45px;
-  bottom: -110px;
+  right: 6vw;
+  bottom: -30vh;
   z-index: 999;
 }
 #tree2{
   width: 130px;
   position: absolute;
-  left: 45px;
-  bottom: -110px;
+  left: 6vw;
+  bottom: -27vh;
   z-index: 999;
 }
 .item-contents{
@@ -553,8 +565,8 @@ transform: scale(1.1);
 #star{
   width: 90px;
   position: absolute;
-  top: 26vh;
-  left: 20vw;
+  top: 21vh;
+  left: 16vw;
   z-index: 999;
 }
 footer{
@@ -585,4 +597,376 @@ footer p{
 @keyframes fuwatAnime {
  0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
  100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+@media all and (max-width:480px) {
+  header{
+    padding: 25px;
+    text-align: center;
+  }
+  .openbtn1{
+    display: none;
+  }
+  .logo{
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+    margin-bottom: 5vh;
+  }
+  .header-photo{
+    width: 90vw;
+    text-align: center;
+
+  }
+  .about-content{
+    display: none;
+  }
+  .about-content-sp{
+    display: block;
+  }
+  #about{
+    padding: 15px;
+    background: url(../images/bg5.png) center/cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+  }
+ h2{
+    width: 35vw;
+    text-align: center;
+    margin-bottom: 3vh !important ;
+  }
+  h2 img{
+    width: 100%;
+  }
+  #mol1{
+    width:20vw;
+    margin-right: 25vw;
+  }
+  #mol2{
+    width: 15vw;
+    margin-left: 25vw;
+
+  }
+  .about-content-sp p{
+    font-size: 15px !important;
+
+    line-height: 1em ;
+  }
+  .rule-contents{
+  display: none;
+}
+.ato{
+  display: none;
+}
+
+#rule{
+  height: 170vh;
+}
+#rule h2{
+  margin-bottom: 30vh !important;
+}
+.rule-contents-sp{
+  display: block;
+}
+.rule-content img{
+  width: 35vw;
+  height: 35vw;
+  margin: auto 0;
+}
+.rule-content p{
+  font-size: 15px;
+  width: 45vw;
+}
+.rule-content{
+  margin-bottom: 10vh;
+}
+.left{
+  margin-right:0;
+}
+.left p{
+  margin-left: 8vw;
+}
+
+.right{
+  margin-left: 0;
+}
+.right p{
+  margin-right: 8vw;
+}
+.ato{
+  display: none;
+
+}
+.ato-sp{
+  width: 5vw;
+}
+.rule-contents-sp #ato1{
+  position: absolute;
+  top: 25vh;
+  right: 0
+}
+.rule-contents-sp #ato2{
+  position: absolute;
+  top: 33vh;
+  right: 20vw
+}
+.rule-contents-sp #ato3{
+  position: absolute;
+  top: 41vh;
+  right: 40vw
+}
+.rule-contents-sp #ato4{
+  position: absolute;
+  top: 52vh;
+  right: 60vw
+}
+
+
+.rule-contents-sp #ato6{
+   position: absolute;
+  top: 88vh;
+  right: 50vw;
+  transform: rotate(-85deg);
+}
+.rule-contents-sp #ato7{
+   position: absolute;
+  top: 125vh;
+  right: 50vw;
+   transform: rotate(0deg);
+
+}
+.rule-contents-sp #ato8{
+  position: absolute;
+  top: 170vh;
+  right: 45vw;
+  transform:rotate(-91deg);
+}
+.rule-contents-sp #ato9{
+  position: absolute;
+  top: 180vh;
+  right: 20vw
+}
+
+#cloud1{
+  width: 20vw;
+  position: absolute;
+  top: -4vh;
+  left: 4vw;
+}
+#cloud2{
+  width: 15vw;
+  position: absolute;
+  top: 7vh;
+  left: 11vw;
+}
+#cloud3{
+  width: 15vw;
+  position: absolute;
+  top: -2vh;
+  left: 75vw;
+
+}
+#molks{
+  position: static;
+  width: 35vw;
+  display: block;
+  position: absolute;
+  top: 95vh;
+  left: 33vw;
+
+}
+#prepare{
+  display: none;
+
+}
+#prepare-sp{
+  display: block;
+  position: relative;
+  padding: 0px;
+
+  text-align: center;
+  background-color: #C1DEA7;
+  background: url(../images/bg6.png) center/cover;
+
+  height: 190vh;
+}
+#arrow{
+  display: none;
+}
+#stick{
+  width: 35vw;
+  position: absolute;
+  top: 48vh;
+  left: 60vw;
+  transform: rotate(10deg);
+}
+#arrow2{
+  height: 30vh;
+  position: absolute;
+  left: 45vw;
+  top: 60vh;
+}
+.distance{
+  position: absolute;
+  font-size: 15px;
+  top: 55vh;
+  left: -3vw;
+}
+#prepare-sp h2{
+  border-bottom:none;
+  margin-top: 5vh;
+}
+.prepare-contents{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prepare-content{
+  width: 60vw;
+  height: 60vw;
+  text-align: center;
+  padding: 5px;
+}
+.down{
+  margin-top: 60vh;
+}
+
+.prepare-content h3{
+  font-size: 30px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+.prepare-content p{
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  margin-left:0 !important;
+  margin: 0 auto;
+
+}
+.arrow-box{
+  display: flex;
+  width: 100%;
+}
+.prepare-contents p{
+  font-size: 15px;
+  margin-left: 5vw;
+
+}
+#play{
+  height: 260vh;
+  background: url(../images/bg7.png) center/cover;
+  background-position: 0 -10vh;
+  padding: 0;
+}
+#play h2{
+  margin-bottom: 20vh !important;
+}
+.play-contents{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.play-content{
+  margin-bottom: 30vh;
+  height: 40vh;
+
+}
+#result{
+  background: url(../images/bg8.png);
+  height: 180vh;
+}
+#result h2{
+  margin-top: 0;
+}
+.result-contents{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.result-content{
+  width: 40vw;
+  height: 40vh;
+  margin: 20px;
+
+}
+.result-content h3{
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 5vh;
+}
+.result-content span{
+  font-size: 35px;
+
+
+}
+.caption{
+  font-size: 15px !important;
+  width: 100%;
+  text-align: center;
+}
+p img{
+  width: 18vw;
+}
+.pin{
+  width: 6vw;
+  position: absolute;
+  top: -10vh;
+  left: 3vw;
+
+}
+#tree1{
+  width: 15vw;
+  position: absolute;
+  bottom: -7vh;
+  right: 5vw;
+}
+#tree2{
+  width: 15vw;
+  left: 5vw;
+  bottom: -7vh;
+}
+#item-sp{
+  display: block;
+  background: #FFF5E5;
+  text-align: center;
+}
+#item{
+  display: none;
+}
+.item-contents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+.item-content{
+  width: 60vw;
+  margin: 10px;
+  margin-bottom: 5vh;
+}
+.item-content h3{
+  font-size: 20px;
+  margin: 0;
+  margin-bottom: 3vh;
+  margin-top: 2vh;
+}
+#item1{
+  margin-left: 0;
+}
+#item2{
+  margin-right: 0;
+}
+.item-content img{
+  width: 40vw;
+  height: 40vw;
+}
+#star{
+  width: 19vw;
+  position: absolute;
+  top:24vh;
+  left: 24vw;
+}
 }

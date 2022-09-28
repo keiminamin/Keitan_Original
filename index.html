@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <title>Molkey</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -25,7 +26,7 @@
 <body>
     <header>
       <img class="logo" width="620" src="images/logo_new2.png" alt="">
-      <img src="images/header.png" alt="">
+      <img class="header-photo" src="images/header.png" alt="">
     </header>
     <div class="openbtn1"><span></span><span></span><span></span>
     </div>
@@ -42,175 +43,304 @@
       </div>
     </nav>
     <div class="circle-bg"></div>
-    <section class="fuwat" id="about">
+    <section id="about">
+      <div class="fuwat">
+        <h2><img width="200" src="images/about.png" alt=""></h2>
+        <div class="about-content">
+          <img width="150" height="150" src="images/mol1.png" alt="">
 
-      <h2><img width="200" src="images/about.png" alt=""></h2>
-      <div class="about-content">
-        <img width="150" height="150" src="images/mol1.png" alt="">
+          <p> モルックとは、フィンランドはカレリア地方の伝統的な<br>
 
-        <p> モルックとは、フィンランドはカレリア地方の伝統的な<br>
+              スポーツkyakkaというゲームを下に開発されたスポーツです<br>
 
-            スポーツkyakkaというゲームを下に開発されたスポーツです<br>
+    　         頭脳と技術を駆使して勝利を掴みましょう。</p>
+          <img width="120" height="150" src="images/mol2.png" alt="">
+        </div>
+        <div class="about-content-sp">
+          <img id="mol1"  src="images/mol1.png" alt="">
+          <img id="mol2"  src="images/mol2.png" alt="">
+          <p> モルックとは、フィンランドはカレリア地方の伝統的な
 
-  　         頭脳と技術を駆使して勝利を掴みましょう。</p>
-        <img width="120" height="150" src="images/mol2.png" alt="">
+              スポーツkyakkaというゲームを下に開発されたスポーツです.<br>
+
+    　        頭脳と技術を駆使して勝利を掴みましょう。</p>
+
+        </div>
       </div>
     </section>
-    <section class="fuwat" id="rule">
-      <img id="ato1" src="images/ato1.png" alt="" width="35">
-      <img id="ato2" src="images/ato1.png" alt="" width="35">
-      <img id="ato3" src="images/ato1.png" alt="" width="35">
-      <img id="ato4" src="images/ato1.png" alt="" width="35">
-      <img id="ato5" src="images/ato1.png" alt="" width="35">
-      <img id="ato6" src="images/ato1.png" alt="" width="35">
-      <img id="ato7" src="images/ato1.png" alt="" width="35">
-      <img id="ato8" src="images/ato1.png" alt="" width="35">
-      <img id="ato9" src="images/ato1.png" alt="" width="35">
-      <img id="ato10" src="images/ato1.png" alt="" width="35">
-      <h2><img width="200" src="images/rule.png" alt=""></h2>
-      <div class="rule-contents">
-        <div class="rule-content left">
-          <img width="250" src="images/molk_photo.jpg" alt="">
-          <p>
-            モルックは一チーム3人以上
-            二チーム以上で公園などで対戦。
-            このような並べ方でスキットル
-            を並べたら準備OK
-          </p>
-          <img class="circle" src="images/circle1.png" alt="" width="90" height="90">
-        </div>
-        <div class="rule-content right">
-          <img class="circle" src="images/circle2.png" alt="" width="90" height="90">
-          <p>
-            投げる時は3~4m離れたところ
-            から。3回連続当たらなかった
-            ら失格なので注意！
+    <section  id="rule">
 
-          </p>
-          <img width="250" src="images/molk_photo2.jpg" alt="">
+        <img class="ato" id="ato1" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato2" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato3" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato4" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato5" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato6" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato7" src="images/ato1.png" alt="" width="35">
 
-        </div>
-        <div class="rule-content left">
-          <img width="250" src="images/molk_photo3.jpg" alt="">
-          <p>
-            当たって倒れたら、倒れた
-            スキットルを記録して、
-            スキットルを倒れた場所で
-            立て直す。これをチームで
-            交互にトライ！
-          </p>
-          <img class="circle" src="images/circle3.png" alt="" width="90" height="90">
+        <img class="ato" id="ato9" src="images/ato1.png" alt="" width="35">
+        <img class="ato" id="ato10" src="images/ato1.png" alt="" width="35">
+        <h2><img width="200" src="images/rule.png" alt=""></h2>
+        <div class="rule-contents">
+          <div class="fuwat">
+            <div class="rule-content left">
+              <img width="250" src="images/molk_photo.jpg" alt="">
+              <p>
+                モルックは一チーム3人以上
+                二チーム以上で公園などで対戦。
+                このような並べ方でスキットル
+                を並べたら準備OK
+              </p>
+              <img class="circle" src="images/circle1.png" alt="" width="90" height="90">
+            </div>
+            <div class="rule-content right">
+              <img class="circle" src="images/circle2.png" alt="" width="90" height="90">
+              <p>
+                投げる時は3~4m離れたところ
+                から。3回連続当たらなかった
+                ら失格なので注意！
+
+              </p>
+              <img width="250" src="images/molk_photo2.jpg" alt="">
+            </div>
+            <div class="rule-content left">
+              <img width="250" src="images/molk_photo3.jpg" alt="">
+              <p>
+                当たって倒れたら、倒れた
+                スキットルを記録して、
+                スキットルを倒れた場所で
+                立て直す。これをチームで
+                交互にトライ！
+              </p>
+              <img class="circle" src="images/circle3.png" alt="" width="90" height="90">
+            </div>
+          </div>
         </div>
 
-      </div>
+        <div class="rule-contents-sp">
+          <img class="ato-sp" id="ato1" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato2" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato3" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato4" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato6" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato7" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato8" src="images/ato1.png" alt="" >
+          <img class="ato-sp" id="ato9" src="images/ato1.png" alt="" >
+
+          <div class="fuwat">
+
+
+
+
+
+            <div class="rule-content left">
+              <img  src="images/molk_photo.jpg" alt="">
+
+              <p>
+                モルックは一チーム3人以上
+                二チーム以上で公園などで対戦。
+                このような並べ方でスキットル
+                を並べたら準備OK
+              </p>
+
+            </div>
+
+            <div class="rule-content right">
+
+              <p>
+                投げる時は3~4m離れたところ
+                から。3回連続当たらなかった
+                ら失格なので注意！
+
+              </p>
+              <img  src="images/molk_photo2.jpg" alt="">
+
+            </div>
+
+            <div class="rule-content left">
+              <img class="molk_photo3"  src="images/molk_photo3.jpg" alt="">
+              <p>
+                当たって倒れたら、倒れた
+                スキットルを記録して、
+                スキットルを倒れた場所で
+                立て直す。これをチームで
+                交互にトライ！
+              </p>
+            </div>
+          </div>
+        </div>
     </section>
-    <section class="fuwat" id="prepare">
-      <img id="cloud1"   width="250"  src="images/cloud.png" alt="">
-      <img id="cloud2"   width="150"  src="images/cloud.png" alt="">
-      <img id="cloud3"   width="130"  src="images/cloud.png" alt="">
-      <img src="images/stick.png" width="180" alt="" id="stick">
-      <img id="molks" src="images/molks.png" width="280" alt="">
-      <img width="320" id="arrow" src="images/arrow.png" alt="">
-      <h2><img width="250" src="images/jyunnbi.png" alt=""></h2>
+    <section id="prepare">
+      <div class="fuwat">
+        <img id="cloud1"   width="250"  src="images/cloud.png" alt="">
+        <img id="cloud2"   width="150"  src="images/cloud.png" alt="">
+        <img id="cloud3"   width="130"  src="images/cloud.png" alt="">
+        <img src="images/stick.png" width="180" alt="" id="stick">
+        <img id="molks" src="images/molks.png" width="280" alt="">
+        <img width="320" id="arrow" src="images/arrow.png" alt="">
+        <h2><img width="250" src="images/jyunnbi.png" alt=""></h2>
 
-      <div class="prepare-contents">
-        <div class="prepare-content">
-          <h3>モルック</h3>
-          <p>投げる棒のことをモルックという。下投げが基本。</p>
-        </div>
-        <p class="distance">きょりは3から4メートル</p>
-        <div class="prepare-content">
-          <h3>スキットル</h3>
-          <p>木製のピン。<br>モルックでスキットルを倒す。並べ方は上</p>
-        </div>
+        <div class="prepare-contents">
+          <div class="prepare-content">
+            <h3>モルック</h3>
+            <p>投げる棒のことをモルックという。下投げが基本。</p>
+          </div>
+          <p class="distance">きょりは3から4メートル</p>
+          <div class="prepare-content">
+            <h3>スキットル</h3>
+            <p>木製のピン。<br>モルックでスキットルを倒す。並べ方は上</p>
+          </div>
 
+        </div>
       </div>
     </section >
-    <section class="fuwat" id="play">
-      <h2><img width="250" src="images/play2.png" alt=""></h2>
-      <div class="play-contents">
-        <div class="play-content">
-          <img class="case" width="100" src="images/casea.png" alt="">
-          <div class="skitto-box">
-            <img width="110" src="images/skiito1.png" alt="">
+    <section id="prepare-sp">
+      <div class="fuwat">
+        <img id="cloud1"   width="250"  src="images/cloud.png" alt="">
+        <img id="cloud2"   width="150"  src="images/cloud.png" alt="">
+        <img id="cloud3"   width="130"  src="images/cloud.png" alt="">
+        <h2><img width="250" src="images/jyunnbi.png" alt=""></h2>
+        <img src="images/stick.png" width="180" alt="" id="stick">
+
+
+
+
+        <div class="prepare-contents">
+          <div class="prepare-content">
+            <h3>モルック</h3>
+            <p>投げる棒のことをモルックという。下投げが基本。</p>
           </div>
-          <h3>1ぽん</h3>
-          <p>ピンの番号が、得点に。<br>
-            (上の場合12点)</p>
+
+            <p class="distance">きょりは3から4メートル</p>
+            <img  id="arrow2" src="images/arrow2.png" alt="">
+
+
+          <img id="molks" src="images/molks.png" width="280" alt="">
+          <div class="prepare-content down">
+            <h3>スキットル</h3>
+            <p>木製のピン。モルックでスキットルを倒す。並べ方は上</p>
+          </div>
+
         </div>
-        <div class="play-content">
-          <img class="case" width="100" src="images/caseb.png" alt="">
-          <div class="skitto-box">
-            <img width="150" src="images/skitto2.png" alt="">
+      </div>
+    </section >
+    <section id="play">
+      <div class="fuwat">
+        <h2><img width="250" src="images/play2.png" alt=""></h2>
+        <div class="play-contents">
+          <div class="play-content">
+            <img class="case" width="100" src="images/casea.png" alt="">
+            <div class="skitto-box">
+              <img width="110" src="images/skiito1.png" alt="">
+            </div>
+            <h3>1ぽん</h3>
+            <p>ピンの番号が、得点に。<br>
+              (上の場合12点)</p>
           </div>
-          <h3>1ぽん</h3>
-          <p>ピンの本数が、得点に。<br>
-              (上の場合2点)</p>
-        </div>
-        <div class="play-content">
-          <img class="case" width="100" src="images/casec.png" alt="">
-          <div class="skitto-box">
-            <img width="150" src="images/skitto3.png" alt="">
+          <div class="play-content">
+            <img class="case" width="100" src="images/caseb.png" alt="">
+            <div class="skitto-box">
+              <img width="150" src="images/skitto2.png" alt="">
+            </div>
+            <h3>1ぽん</h3>
+            <p>ピンの本数が、得点に。<br>
+                (上の場合2点)</p>
           </div>
-          <h3>かさなったら</h3>
-          <p> 完全に倒れたほうだけ得点に。<br>
-              (上の場合5点)</p>
+          <div class="play-content">
+            <img class="case" width="100" src="images/casec.png" alt="">
+            <div class="skitto-box">
+              <img width="150" src="images/skitto3.png" alt="">
+            </div>
+            <h3>かさなったら</h3>
+            <p> 完全に倒れたほうだけ得点に。<br>
+                (上の場合5点)</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="fuwat" id="result">
-      <h2><img width="250" src="images/kekka.png" alt=""></h2>
-      <div class="result-contents">
-        <div class="result-content">
-          <img class="pin" width="20" src="images/pin1.png" alt="">
-          <div class="image-box">
-            <p><img width="100" src="images/win2.png" alt=""></p>
+    <section id="result">
+      <div class="fuwat">
+        <h2><img width="250" src="images/kekka.png" alt=""></h2>
+        <div class="result-contents">
+          <div class="result-content">
+            <img class="pin" width="20" src="images/pin1.png" alt="">
+            <div class="image-box">
+              <p><img width="100" src="images/win2.png" alt=""></p>
+            </div>
+            <h3> <span>50</span>点ピッタリに。</h3>
+            <p class="caption">50点になったチームが勝ち。</p>
           </div>
-          <h3> <span>50</span>点ピッタリに。</h3>
-          <p class="caption">50点になったチームが勝ち。</p>
-        </div>
-        <div class="result-content">
-          <img class="pin" width="20" src="images/pin2.png" alt="">
-          <div class="image-box">
-            <p><img  width="160" src="images/retry2.png" alt=""></p>
+          <div class="result-content">
+            <img class="pin" width="20" src="images/pin2.png" alt="">
+            <div class="image-box">
+              <p><img  width="160" src="images/retry2.png" alt=""></p>
+            </div>
+            <h3> <span>50</span>点ピッタリに。</h3>
+            <p class="caption">そのチームの得点は25点に。</p>
           </div>
-          <h3> <span>50</span>点ピッタリに。</h3>
-          <p class="caption">そのチームの得点は25点に。</p>
-        </div>
-        <div  class="result-content">
+          <div  class="result-content">
 
-          <img class="pin" width="20" src="images/pin3.png" alt="">
-          <div class="image-box">
-            <p><img width="100" src="images/lose2.png" alt=""></p>
+            <img class="pin" width="20" src="images/pin3.png" alt="">
+            <div class="image-box">
+              <p><img width="100" src="images/lose2.png" alt=""></p>
+            </div>
+            <h3> <span>3</span>回ミス。</h3>
+            <p class="caption">3回ミスしたチームが負け。</p>
           </div>
-          <h3> <span>3</span>回ミス。</h3>
-          <p class="caption">3回ミスしたチームが負け。</p>
+        </div>
+        <img id="tree1" width="120" src="images/tree1.png" alt="">
+        <img id="tree2" width="120" src="images/tree2.png" alt="">
+      </div>
+    </section>
+    <section id="item">
+      <div class="fuwat">
+        <h2><img width="250" src="images/item.png" alt=""></h2>
+        <img id="star" src="images/star.png" alt="">
+        <div id="item1" class="item-contents">
+          <div class="item-content">
+            <a target="_blank" href="https://www.amazon.co.jp/MOLKKY-%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84-Molkky-Finnish-Wooded/dp/B08DD86VNJ/ref=pd_lpo_1?pd_rd_i=B08DD86VNJ&psc=1" class="item-box">
+
+
+              <img height="200" width="200" src="images/mol_right.jpeg" alt="">
+
+            </a>
+            <h3>Molkkyライト版</h3>
+            <p>4999円</p>
+          </div>
+          <img width="3" class="border" src="images/border.png" alt="">
+          <div id="item2" class="item-content">
+            <a target="_blank" href="https://shop.magnet-inc.com/products/molkky-tournament-model?variant=40144540172480&currency=JPY&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwm8WZBhBUEiwA178UnAhhrxxFd20Dh9YTUfbOJ9PbxNq1qEY75C_5XpZEzN8CgFgnz6KtNRoCyrsQAvD_BwE" class="item-box">
+              <img height="200" width="200" src="images/molk_item.jpeg" alt="">
+            </a>
+            <h3>Molkky公式セット</h3>
+            <p>10879円</p>
+          </div>
         </div>
       </div>
-      <img id="tree1" width="120" src="images/tree1.png" alt="">
-      <img id="tree2" width="120" src="images/tree2.png" alt="">
     </section>
-    <section class="fuwat" id="item">
-      <h2><img width="250" src="images/item.png" alt=""></h2>
-      <img id="star" src="images/star.png" alt="">
-      <div id="item1" class="item-contents">
-        <div class="item-content">
-          <a target="_blank" href="https://www.amazon.co.jp/MOLKKY-%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84-Molkky-Finnish-Wooded/dp/B08DD86VNJ/ref=pd_lpo_1?pd_rd_i=B08DD86VNJ&psc=1" class="item-box">
+    <section id="item-sp">
+      <div class="fuwat">
+        <h2><img width="250" src="images/item.png" alt=""></h2>
+        <img id="star" src="images/star.png" alt="">
+        <div id="item1" class="item-contents">
+          <div class="item-content">
+            <a target="_blank" href="https://www.amazon.co.jp/MOLKKY-%E3%82%A2%E3%82%A6%E3%83%88%E3%83%89%E3%82%A2%E3%82%B9%E3%83%9D%E3%83%BC%E3%83%84-Molkky-Finnish-Wooded/dp/B08DD86VNJ/ref=pd_lpo_1?pd_rd_i=B08DD86VNJ&psc=1" class="item-box">
 
 
-            <img height="200" width="200" src="images/mol_right.jpeg" alt="">
+              <img height="200" width="200" src="images/mol_right.jpeg" alt="">
 
-          </a>
-          <h3>Molkkyライト版</h3>
-          <p>4999円</p>
-        </div>
-        <img width="3" class="border" src="images/border.png" alt="">
-        <div id="item2" class="item-content">
-          <a target="_blank" href="https://shop.magnet-inc.com/products/molkky-tournament-model?variant=40144540172480&currency=JPY&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwm8WZBhBUEiwA178UnAhhrxxFd20Dh9YTUfbOJ9PbxNq1qEY75C_5XpZEzN8CgFgnz6KtNRoCyrsQAvD_BwE" class="item-box">
-            <img height="200" width="200" src="images/molk_item.jpeg" alt="">
-          </a>
-          <h3>Molkky公式セット</h3>
-          <p>10879円</p>
+            </a>
+            <h3>Molkkyライト版</h3>
+            <p>4999円</p>
+          </div>
+
+          <div id="item2" class="item-content">
+            <a target="_blank" href="https://shop.magnet-inc.com/products/molkky-tournament-model?variant=40144540172480&currency=JPY&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjwm8WZBhBUEiwA178UnAhhrxxFd20Dh9YTUfbOJ9PbxNq1qEY75C_5XpZEzN8CgFgnz6KtNRoCyrsQAvD_BwE" class="item-box">
+              <img height="200" width="200" src="images/molk_item.jpeg" alt="">
+            </a>
+            <h3>Molkky公式セット</h3>
+            <p>10879円</p>
+          </div>
         </div>
       </div>
     </section>
