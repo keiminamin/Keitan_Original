@@ -24,15 +24,18 @@ header{
 
 }
 
+/*アクティブになったエリア*/
 #g-nav.panelactive{
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
-    /* position:fixed; */
+    position:fixed;
     z-index: 999;
   top: 0;
   width:100%;
     height: 100vh;
 }
-
+.link{
+  color: #65655E !important;
+}
 /*丸の拡大*/
 .circle-bg{
     position: fixed;
@@ -41,7 +44,7 @@ header{
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: #D0B87F;
+    background-color: #D0B87F;
     /*丸のスタート位置と形状*/
   transform: scale(0);/*scaleをはじめは0に*/
   left:-50px;
@@ -66,7 +69,7 @@ header{
 }
 
 #g-nav.panelactive #g-nav-list{
-    display: block; /*クラスが付与されたら出現*/
+     display: block; /*クラスが付与されたら出現*/
 }
 
 /*ナビゲーション*/
@@ -74,7 +77,7 @@ header{
   opacity: 0;/*はじめは透過0*/
     /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
     position: absolute;
-    z-index: 999;
+    z-index: 99;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
@@ -110,68 +113,68 @@ opacity: 1;
 }
 
 #g-nav li a{
-  color: #fff;
+  color: #333;
   text-decoration: none;
   padding:10px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: normal;
-  font-size: 30px;
-}
-.link{
-  font-size: 15px !important;
+  font-weight: bold;
 }
 
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn1{
+
   position:fixed;
-  top:55px;
-  left: 152px;
+  top:3vh;
+  left: 10vw;
   z-index: 9999;/*ボタンを最前面に*/
   cursor: pointer;
-    width: 70px;
-    height:80px;
-
-    display: flex;
-    flex-direction: column;
-    align-content:space-around ;
+    width: 80px;
+    height:100px;
+    border-radius: 5px;
+    background-color: #D0B87F;
 }
 
 /*×に変化*/
 .openbtn1 span{
     display: inline-block;
     transition: all .4s;
-    margin-bottom: 5px;
-    left: 14px;
-    height: 12px;
-    border-radius: 20px;
-  background-color: #D0B87F;
-    width: 72%;
+    position: absolute;
+    left: 20px;
+    height: 5px;
+    border-radius: 2px;
+  background-color: #FFF;
+    width: 50%;
 
 
   }
+.openbtn1 p{
+  text-align: center;
+  margin-top: 40%;
+
+}
 
 .openbtn1 span:nth-of-type(1) {
-  top:15px;
+  top:22px;
+  display: block;
+
 }
 
 .openbtn1 span:nth-of-type(2) {
-  top:23px;
-}
-
-.openbtn1 span:nth-of-type(3) {
   top:31px;
 }
 
+.openbtn1 span:nth-of-type(3) {
+  top:40px;
+}
+
 .openbtn1.active span:nth-of-type(1) {
-    position: absolute;
-    top: 18px;
-    left: 14px;
+    top: 20px;
+    left: 23px;
     transform: translateY(6px) rotate(-45deg);
-    width: 70%;
-    background-color: #FFF;
+    width: 45%;
 }
 
 .openbtn1.active span:nth-of-type(2) {
@@ -179,13 +182,15 @@ opacity: 1;
 }
 
 .openbtn1.active span:nth-of-type(3){
-      position: absolute;
-    top: 30px;
-    left: 14px;
+    top: 32px;
+    left: 23px;
     transform: translateY(-6px) rotate(45deg);
-    width: 70%;
-    background-color: #FFF;
+    width: 45%;
 }
+.openbtn1.active p{
+  opacity: 0;
+}
+
 h2{
   color: #D0B87F;
   border-bottom: 4px dashed #D0B87F;
@@ -654,12 +659,16 @@ footer p{
   .rule-contents{
   display: none;
 }
+.rule-content{
+  margin-bottom: 0 !important;
+}
+
 .ato{
   display: none;
 }
 
 #rule{
-  height: 170vh;
+  height: 140vh;
 }
 #rule h2{
   margin-bottom: 30vh !important;
@@ -675,6 +684,7 @@ footer p{
 .rule-content p{
   font-size: 15px;
   width: 45vw;
+
 }
 .rule-content{
   margin-bottom: 10vh;
@@ -721,11 +731,29 @@ footer p{
 }
 
 
-.rule-contents-sp #ato6{
-   position: absolute;
-  top: 88vh;
-  right: 50vw;
-  transform: rotate(-85deg);
+.ato-box{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.ato-box2{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.ato-box .ato-sp{
+  width: 20px;
+  height: 45px;
+  transform: rotate(-90deg);
+}
+.ato-box2 .ato-sp{
+  width: 20px;
+  height: 45px;
+  transform: rotate(11deg);
 }
 .rule-contents-sp #ato7{
    position: absolute;
@@ -795,7 +823,7 @@ footer p{
 #stick{
   width: 35vw;
   position: absolute;
-  top: 48vh;
+  top: 40vh;
   left: 60vw;
   transform: rotate(10deg);
 }
@@ -828,7 +856,7 @@ footer p{
   padding: 5px;
 }
 .down{
-  margin-top: 60vh;
+  margin-top: 65vh;
 }
 
 .prepare-content h3{
@@ -920,13 +948,13 @@ p img{
 #tree1{
   width: 15vw;
   position: absolute;
-  bottom: -7vh;
+  bottom: -19vh;
   right: 5vw;
 }
 #tree2{
   width: 15vw;
   left: 5vw;
-  bottom: -7vh;
+  bottom: -17vh;
 }
 #item-sp{
   display: block;
